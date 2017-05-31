@@ -2,7 +2,7 @@
 This is the Python Flask Demo for Predix 
 
 
-My flask app includes the following functions: 
+My Flask app includes the following functions: 
 
 1.         Basic http authentication 
 
