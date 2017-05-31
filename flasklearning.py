@@ -26,7 +26,7 @@ app.config.update(dict(
   PREFERRED_URL_SCHEME='https'
 ))
 users = [
-    {'username': 'admin', 'password': 'predixFlask'}
+    {'username': 'admin', 'password': 'passord'}
 ]
 db = SQLAlchemy(app)
 
