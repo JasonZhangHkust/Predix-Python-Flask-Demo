@@ -1,0 +1,9 @@
+---
+applications:
+- name: predix-demo-yiDatabase-python
+  memory: 512M
+  build_pack: python_buildpack
+  command: python flasklearning.py
+  stack: cflinuxfs2
+  services:
+    - yiSql

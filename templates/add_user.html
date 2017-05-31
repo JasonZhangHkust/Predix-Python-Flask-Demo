@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block page_content %}
+<h1> Add User Profile </h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <h3 style="color:red;">{{ message }}</h3>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form method="post" action="/post_user">
+        <label>Username:</label>
+        <input id="username" name="username" type="text" placeholder="Your Name" />
+        <label>Gender:</label>
+        <input id="gender" name="gender" type="radio" value="Male"/>Male
+        <input id="gender" name="gender" type="radio" value="Female"/>Female
+        <label>Age:</label>
+        <input id="age" name="age" type="text"  placeholder="e.g. 17"/>
+        <label>College:</label>
+        <input id="college" name="college" type="text"  placeholder="e.g. MIT"/>
+        <input type="submit",value="Submit" />
+    </form>
+    <h1> Inquire User Profile </h1>
+    <form method="get" action="/profile">
+        <label>Username:</label>
+        <input id="username" name="username" type="text" placeholder="User name" />
+        <input type="submit",value="Submit"/>
+    </form>
+    <h1> Inquire All Users Profile </h1>
+    <form method="get" action="/profile/all">
+        <label>Retrieve all users info ?</label><br>
+        <input type="submit",value="Submit"/>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block page_content %}
+    {% for user in myUser %}
+        <li type="1">{{ user.username }} - Profile</li>
+        Gender: {{ user.gender }}<br>
+        Age: {{ user.age }}<br>
+        College: {{ user.college }}<br><br>
+    {% endfor %}
+    <input type="button" name="Submit" value="Return" onclick="javascript:history.go(-1)" />
+{% endblock %}
