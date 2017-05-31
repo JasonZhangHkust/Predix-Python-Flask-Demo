@@ -12,3 +12,5 @@ My Flask app includes the following functions:
 
 4.         User info input & users profile retrieve with PostgreSQL and SQLAlchemy
 
+
+But before pushing my script to Predix, please rewrite the conf.conf file using your own PostgreSQL service url(delete the [] also) and choose another password instead in .py file.
