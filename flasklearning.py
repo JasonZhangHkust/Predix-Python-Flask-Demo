@@ -31,7 +31,7 @@ users = [
 db = SQLAlchemy(app)
 
 
-class User(db.Model):
+class User(db.Model): # User data model
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True)
     gender = db.Column(db.String(10), unique=False)
@@ -56,7 +56,7 @@ def get_password(username):
     return None
 
 
-class RegistrationForm(Form):
+class RegistrationForm(Form): # Form Validation check
     username = StringField('username', validators=[Length(min=4, max=25)])
     gender = RadioField('gender', choices=[('Male', 'Male'), ('Female', 'Female')],
                         validators=[DataRequired(message=u'Please select your gender')])
@@ -107,7 +107,7 @@ def get_all():
         return render_template('profile.html', myUser=myUser)
 
 
-@app.route('/post_user', methods=['POST'])
+@app.route('/post_user', methods=['POST']) #input user info with post method
 def post_user():
     form = RegistrationForm(request.form)
     if not form.validate():
