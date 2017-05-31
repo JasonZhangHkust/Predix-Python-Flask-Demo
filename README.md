@@ -8,7 +8,7 @@ My Flask app includes the following functions:
 
 2.         Primitive theme from Bootstrap 
 
-3.         Form validation check with WTForm. 
+3.         Form validation check with WTForm
 
 4.         User info input & users profile retrieve with PostgreSQL and SQLAlchemy
 
